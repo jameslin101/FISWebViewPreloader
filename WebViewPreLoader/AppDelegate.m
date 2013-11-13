@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "PresentingViewController.h"
-#import "TestViewController.h"
 
 @implementation AppDelegate
 
@@ -19,14 +18,9 @@
     
     PresentingViewController *pvc = [[PresentingViewController alloc] init];
     
-    
-    
-    TestViewController *tvc = [[TestViewController alloc]init];
-    
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:pvc];
 
     self.window.rootViewController = navigationController;
-    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

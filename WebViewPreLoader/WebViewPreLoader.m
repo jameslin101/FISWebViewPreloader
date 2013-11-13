@@ -12,7 +12,6 @@
 
 @property (strong,nonatomic) NSMutableDictionary *preLoadedWebViews;
 
-
 @end
 
 
@@ -81,6 +80,11 @@
     webViewToRemove = nil;
     
     [self.preLoadedWebViews removeObjectForKey:aKey];
+}
+
+- (void)clear
+{
+    self.preLoadedWebViews = [[NSMutableDictionary alloc] init];
 }
 
 #pragma mark UIWebViewDelegate methods

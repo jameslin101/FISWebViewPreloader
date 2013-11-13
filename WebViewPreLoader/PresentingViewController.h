@@ -11,11 +11,8 @@
 
 @interface PresentingViewController : UIViewController 
 
-
 - (IBAction)showCnnPressed:(id)sender;
 - (IBAction)showRedditPressed:(id)sender;
 - (IBAction)showGoogleNewsPressed:(id)sender;
-
-
 
 @end
