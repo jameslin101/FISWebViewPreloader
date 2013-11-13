@@ -30,12 +30,15 @@
     if(self.webView)
     {
         NSLog(@"Webview is alive!");
-        self.view.contentMode = UIViewContentModeRedraw;
 
         //TEST
         
      //   self.webView = [[UIWebView alloc]init];
        // [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.reddit.com"]]];
+        
+        //[self.webView setFrame:self.view.bounds];
+        
+        [self.view addSubview:self.webView];
         
         
         NSLog(@"frame is %@", self.view);

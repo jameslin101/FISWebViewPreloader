@@ -72,6 +72,16 @@
     return [[self.preLoadedWebViews allKeysForObject:webview] firstObject];
 }
 
+- (void)removeWebViewForKey:(id<NSCopying>)aKey
+{
+    UIWebView *webViewToRemove = [self webViewForKey:aKey];
+    
+    if ([webViewToRemove isLoading]) [webViewToRemove stopLoading];
+    
+    webViewToRemove = nil;
+    
+    [self.preLoadedWebViews removeObjectForKey:aKey];
+}
 
 #pragma mark UIWebViewDelegate methods
 
