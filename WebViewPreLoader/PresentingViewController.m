@@ -31,8 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self preLoadWebViews];
-    
     [self setTitle:@"Presenting View Controller"];
     
     // Do any additional setup after loading the view from its nib.
@@ -40,14 +38,6 @@
 
 -(void)preLoadWebViews
 {
-    self.preLoader = [[WebViewPreLoader alloc]init];
-
-    [self.preLoader setURLString:@"http://www.reddit.com" forKey:@"Reddit" withFrameWidth:self.view.frame.size.width withFrameLength:self.view.frame.size.height];
-    
-    
-    [self.preLoader setURLString:@"http://www.reddit.com" forKey:@"Google News"];
-    [self.preLoader setURLString:@"http://www.cnn.com" forKey:@"CNN"];
-
     
 }
 
@@ -56,38 +46,66 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//
+//- (IBAction)showCnnPressed:(id)sender {
+//    UIWebView *cnnWebView = [self.preLoader webViewForKey:@"CNN"];
+//    
+//    DetailsViewController *dvc = [[DetailsViewController alloc] init];
+//    dvc.webView = cnnWebView;
+//    
+//    [self.navigationController pushViewController:dvc animated:YES];
+//    
+//}
+//
+//- (IBAction)showRedditPressed:(id)sender {
+//    
+//    UIWebView *redditWebView = [self.preLoader webViewForKey:@"Reddit"];
+//    
+//    DetailsViewController *dvc = [[DetailsViewController alloc] init];
+//    dvc.webView = redditWebView;
+//    
+//    [self.navigationController pushViewController:dvc animated:YES];
+//}
+//
+//- (IBAction)showGoogleNewsPressed:(id)sender {
+//    
+//    UIWebView *googleNewsWebView = [self.preLoader webViewForKey:@"Google News"];
+//    
+//    DetailsViewController *dvc = [[DetailsViewController alloc] init];
+//    dvc.webView = googleNewsWebView;
+//    
+//    [self.navigationController pushViewController:dvc animated:YES];
+//}
 
-- (IBAction)showCnnPressed:(id)sender {
-    UIWebView *cnnWebView = [self.preLoader webViewForKey:@"CNN"];
+
+
+
+- (IBAction)startLoadingButtonPressed:(id)sender {
+    self.preLoader = [[WebViewPreLoader alloc]init];
     
-    DetailsViewController *dvc = [[DetailsViewController alloc] init];
-    dvc.webView = cnnWebView;
+    for(int i = 0; i<100; i++)
+    {
+       NSString *randomURL = [NSString stringWithFormat:@"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
+    [self.preLoader setURLString:randomURL
+                          forKey:[NSNumber numberWithInt:i]
+                  withFrameWidth:self.containerView.frame.size.width
+                 withFrameLength:self.containerView.frame.size.height];
     
-    [self.navigationController pushViewController:dvc animated:YES];
+    }
+ 
+    
     
 }
 
-- (IBAction)showRedditPressed:(id)sender {
+- (IBAction)fetchRandomSiteButtonPressed:(id)sender {
     
-    UIWebView *redditWebView = [self.preLoader webViewForKey:@"Reddit"];
+    [self.containerView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     
-    DetailsViewController *dvc = [[DetailsViewController alloc] init];
-    dvc.webView = redditWebView;
+    int randomNumber = arc4random_uniform(100);
+    NSLog(@"I chose: %i", randomNumber);
+    UIWebView *randomView = [self.preLoader webViewForKey:[NSNumber numberWithInt:randomNumber]];
     
-    [self.navigationController pushViewController:dvc animated:YES];
+    [self.containerView addSubview:randomView];
+    
 }
-
-- (IBAction)showGoogleNewsPressed:(id)sender {
-    
-    UIWebView *googleNewsWebView = [self.preLoader webViewForKey:@"Google News"];
-    
-    DetailsViewController *dvc = [[DetailsViewController alloc] init];
-    dvc.webView = googleNewsWebView;
-    
-    [self.navigationController pushViewController:dvc animated:YES];
-}
-
-
-
-
 @end
