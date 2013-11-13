@@ -19,6 +19,13 @@
 		F16F95901833DC2D002CA229 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F95781833DC2D002CA229 /* UIKit.framework */; };
 		F16F95981833DC2D002CA229 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F16F95961833DC2D002CA229 /* InfoPlist.strings */; };
 		F16F959A1833DC2D002CA229 /* WebViewPreLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95991833DC2D002CA229 /* WebViewPreLoaderTests.m */; };
+		F16F95A51833DE7F002CA229 /* WebViewPreLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95A41833DE7F002CA229 /* WebViewPreLoader.m */; };
+		F16F95A91833E5BE002CA229 /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95A71833E5BE002CA229 /* PresentingViewController.m */; };
+		F16F95AA1833E5BE002CA229 /* PresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16F95A81833E5BE002CA229 /* PresentingViewController.xib */; };
+		F16F95AE1833E5C7002CA229 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95AC1833E5C7002CA229 /* DetailsViewController.m */; };
+		F16F95AF1833E5C7002CA229 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16F95AD1833E5C7002CA229 /* DetailsViewController.xib */; };
+		F16F95B31833F6CC002CA229 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95B11833F6CC002CA229 /* TestViewController.m */; };
+		F16F95B41833F6CC002CA229 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16F95B21833F6CC002CA229 /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,17 @@
 		F16F95951833DC2D002CA229 /* WebViewPreLoaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewPreLoaderTests-Info.plist"; sourceTree = "<group>"; };
 		F16F95971833DC2D002CA229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F16F95991833DC2D002CA229 /* WebViewPreLoaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewPreLoaderTests.m; sourceTree = "<group>"; };
+		F16F95A31833DE7F002CA229 /* WebViewPreLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewPreLoader.h; sourceTree = "<group>"; };
+		F16F95A41833DE7F002CA229 /* WebViewPreLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewPreLoader.m; sourceTree = "<group>"; };
+		F16F95A61833E5BE002CA229 /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
+		F16F95A71833E5BE002CA229 /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
+		F16F95A81833E5BE002CA229 /* PresentingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentingViewController.xib; sourceTree = "<group>"; };
+		F16F95AB1833E5C7002CA229 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		F16F95AC1833E5C7002CA229 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		F16F95AD1833E5C7002CA229 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		F16F95B01833F6CC002CA229 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		F16F95B11833F6CC002CA229 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		F16F95B21833F6CC002CA229 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,17 @@
 			children = (
 				F16F95831833DC2D002CA229 /* AppDelegate.h */,
 				F16F95841833DC2D002CA229 /* AppDelegate.m */,
+				F16F95A61833E5BE002CA229 /* PresentingViewController.h */,
+				F16F95A71833E5BE002CA229 /* PresentingViewController.m */,
+				F16F95A81833E5BE002CA229 /* PresentingViewController.xib */,
+				F16F95AB1833E5C7002CA229 /* DetailsViewController.h */,
+				F16F95AC1833E5C7002CA229 /* DetailsViewController.m */,
+				F16F95B01833F6CC002CA229 /* TestViewController.h */,
+				F16F95B11833F6CC002CA229 /* TestViewController.m */,
+				F16F95B21833F6CC002CA229 /* TestViewController.xib */,
+				F16F95AD1833E5C7002CA229 /* DetailsViewController.xib */,
+				F16F95A31833DE7F002CA229 /* WebViewPreLoader.h */,
+				F16F95A41833DE7F002CA229 /* WebViewPreLoader.m */,
 				F16F95861833DC2D002CA229 /* Images.xcassets */,
 				F16F957B1833DC2D002CA229 /* Supporting Files */,
 			);
@@ -220,7 +249,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16F957F1833DC2D002CA229 /* InfoPlist.strings in Resources */,
+				F16F95B41833F6CC002CA229 /* TestViewController.xib in Resources */,
 				F16F95871833DC2D002CA229 /* Images.xcassets in Resources */,
+				F16F95AA1833E5BE002CA229 /* PresentingViewController.xib in Resources */,
+				F16F95AF1833E5C7002CA229 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16F95B31833F6CC002CA229 /* TestViewController.m in Sources */,
 				F16F95851833DC2D002CA229 /* AppDelegate.m in Sources */,
+				F16F95AE1833E5C7002CA229 /* DetailsViewController.m in Sources */,
+				F16F95A51833DE7F002CA229 /* WebViewPreLoader.m in Sources */,
 				F16F95811833DC2D002CA229 /* main.m in Sources */,
+				F16F95A91833E5BE002CA229 /* PresentingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PresentingViewController.h"
+#import "TestViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +16,18 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    PresentingViewController *pvc = [[PresentingViewController alloc] init];
+    
+    
+    
+    TestViewController *tvc = [[TestViewController alloc]init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:pvc];
+
+    self.window.rootViewController = navigationController;
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
