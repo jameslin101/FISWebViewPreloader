@@ -30,7 +30,7 @@
     if(self.webView)
     {
         NSLog(@"Webview is alive!");
-        [self.webView setContentMode:UIViewContentModeRedraw];
+        self.view.contentMode = UIViewContentModeRedraw;
 
         //TEST
         
@@ -39,19 +39,23 @@
         
         
         NSLog(@"frame is %@", self.view);
-       [self.webView setFrame:self.view.bounds];
         
-        [self.view addSubview:self.webView];
         
-        [self.view setNeedsDisplay];
-
     }
 
     
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillLayoutSubviews {
+    
+    [self.view.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
 
+    [self.webView setFrame:self.view.bounds];
+
+    [self.view addSubview:self.webView];
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

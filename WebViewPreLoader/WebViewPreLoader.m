@@ -45,7 +45,6 @@
     else {
         preLoadedWebView = [[UIWebView alloc]init];
     }
-//    preLoadedWebView.contentMode = UIViewContentModeRedraw;
     
     [preLoadedWebView loadRequest:request];
     preLoadedWebView.scalesPageToFit = YES;
