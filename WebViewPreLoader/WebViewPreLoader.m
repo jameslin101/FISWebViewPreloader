@@ -1,21 +1,21 @@
 //
-//  WebViewPreLoader.m
-//  WebViewPreLoader
+//  WebViewPreloader.m
+//  WebViewPreloader
 //
 //  Created by Basar Akyelli on 11/13/13.
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
 //
 
-#import "WebViewPreLoader.h"
+#import "WebViewPreloader.h"
 
-@interface WebViewPreLoader ()
+@interface WebViewPreloader ()
 
-@property (strong,nonatomic) NSMutableDictionary *preLoadedWebViews;
+@property (strong,nonatomic) NSMutableDictionary *preloadedWebViews;
 
 @end
 
 
-@implementation WebViewPreLoader
+@implementation WebViewPreloader
 
 - (id)init
 {
@@ -23,7 +23,7 @@
     
     if(self)
     {
-        _preLoadedWebViews = [[NSMutableDictionary alloc]init];
+        _preloadedWebViews = [[NSMutableDictionary alloc]init];
     }
     
     return self;
@@ -36,23 +36,23 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
  
-    UIWebView *preLoadedWebView;
+    UIWebView *preloadedWebView;
     
     if (aWidth > 0 && aHeight > 0) {
-        preLoadedWebView = [[UIWebView alloc]initWithFrame:(CGRectMake(0, 0, aWidth, aHeight))];
+        preloadedWebView = [[UIWebView alloc]initWithFrame:(CGRectMake(0, 0, aWidth, aHeight))];
     }
     else {
-        preLoadedWebView = [[UIWebView alloc]init];
+        preloadedWebView = [[UIWebView alloc]init];
     }
     
-    [preLoadedWebView loadRequest:request];
-    preLoadedWebView.scalesPageToFit = YES;
+    [preloadedWebView loadRequest:request];
+    preloadedWebView.scalesPageToFit = YES;
     
-    [self.preLoadedWebViews setObject:preLoadedWebView forKey:aKey];
+    [self.preloadedWebViews setObject:preloadedWebView forKey:aKey];
 
-    preLoadedWebView.delegate = self;
+    preloadedWebView.delegate = self;
         
-    return preLoadedWebView;
+    return preloadedWebView;
 }
 
 
@@ -63,12 +63,12 @@
 
 - (UIWebView *)webViewForKey:(id<NSCopying>)aKey
 {
-    return self.preLoadedWebViews[aKey];
+    return self.preloadedWebViews[aKey];
 }
 
 - (id)keyForWebView:(UIWebView *)webview {
     
-    return [[self.preLoadedWebViews allKeysForObject:webview] firstObject];
+    return [[self.preloadedWebViews allKeysForObject:webview] firstObject];
 }
 
 - (void)removeWebViewForKey:(id<NSCopying>)aKey
@@ -79,12 +79,12 @@
     
     webViewToRemove = nil;
     
-    [self.preLoadedWebViews removeObjectForKey:aKey];
+    [self.preloadedWebViews removeObjectForKey:aKey];
 }
 
 - (void)clear
 {
-    self.preLoadedWebViews = [[NSMutableDictionary alloc] init];
+    self.preloadedWebViews = [[NSMutableDictionary alloc] init];
 }
 
 #pragma mark UIWebViewDelegate methods

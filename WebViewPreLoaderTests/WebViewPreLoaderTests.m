@@ -1,6 +1,6 @@
 //
-//  WebViewPreLoaderTests.m
-//  WebViewPreLoaderTests
+//  WebViewPreloaderTests.m
+//  WebViewPreloaderTests
 //
 //  Created by Basar Akyelli on 11/13/13.
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface WebViewPreLoaderTests : XCTestCase
+@interface WebViewPreloaderTests : XCTestCase
 
 @end
 
-@implementation WebViewPreLoaderTests
+@implementation WebViewPreloaderTests
 
 - (void)setUp
 {

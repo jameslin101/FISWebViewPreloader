@@ -1,6 +1,6 @@
 //
-//  WebViewPreLoader.h
-//  WebViewPreLoader
+//  WebViewPreloader.h
+//  WebViewPreloader
 //
 //  Created by Basar Akyelli on 11/13/13.
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebViewPreLoader : NSObject <UIWebViewDelegate>
+@interface WebViewPreloader : NSObject <UIWebViewDelegate>
 
 -(void) setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey;
 -(UIWebView *) webViewForKey:(id<NSCopying>)aKey;

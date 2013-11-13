@@ -1,19 +1,19 @@
 //
 //  PresentingViewController.m
-//  WebViewPreLoader
+//  WebViewPreloader
 //
 //  Created by Basar Akyelli on 11/13/13.
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
 //
 
+#import "WebViewPreloader.h"
 #import "PresentingViewController.h"
-#import "WebViewPreLoader.h"
 #import "DetailsViewController.h"
 
 
 @interface PresentingViewController ()
 
-@property (strong,nonatomic) WebViewPreLoader *preLoader;
+@property (strong,nonatomic) WebViewPreloader *preloader;
 
 @end
 
@@ -36,7 +36,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)preLoadWebViews
+-(void)preloadWebViews
 {
     
 }
@@ -48,7 +48,7 @@
 }
 //
 //- (IBAction)showCnnPressed:(id)sender {
-//    UIWebView *cnnWebView = [self.preLoader webViewForKey:@"CNN"];
+//    UIWebView *cnnWebView = [self.preloader webViewForKey:@"CNN"];
 //    
 //    DetailsViewController *dvc = [[DetailsViewController alloc] init];
 //    dvc.webView = cnnWebView;
@@ -59,7 +59,7 @@
 //
 //- (IBAction)showRedditPressed:(id)sender {
 //    
-//    UIWebView *redditWebView = [self.preLoader webViewForKey:@"Reddit"];
+//    UIWebView *redditWebView = [self.preloader webViewForKey:@"Reddit"];
 //    
 //    DetailsViewController *dvc = [[DetailsViewController alloc] init];
 //    dvc.webView = redditWebView;
@@ -69,7 +69,7 @@
 //
 //- (IBAction)showGoogleNewsPressed:(id)sender {
 //    
-//    UIWebView *googleNewsWebView = [self.preLoader webViewForKey:@"Google News"];
+//    UIWebView *googleNewsWebView = [self.preloader webViewForKey:@"Google News"];
 //    
 //    DetailsViewController *dvc = [[DetailsViewController alloc] init];
 //    dvc.webView = googleNewsWebView;
@@ -81,12 +81,12 @@
 
 
 - (IBAction)startLoadingButtonPressed:(id)sender {
-    self.preLoader = [[WebViewPreLoader alloc]init];
+    self.preloader = [[WebViewPreloader alloc]init];
     
     for(int i = 0; i<100; i++)
     {
        NSString *randomURL = [NSString stringWithFormat:@"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
-    [self.preLoader setURLString:randomURL
+    [self.preloader setURLString:randomURL
                           forKey:[NSNumber numberWithInt:i]
                   withFrameWidth:self.containerView.frame.size.width
                  withFrameLength:self.containerView.frame.size.height];
@@ -103,7 +103,7 @@
     
     int randomNumber = arc4random_uniform(100);
     NSLog(@"I chose: %i", randomNumber);
-    UIWebView *randomView = [self.preLoader webViewForKey:[NSNumber numberWithInt:randomNumber]];
+    UIWebView *randomView = [self.preloader webViewForKey:[NSNumber numberWithInt:randomNumber]];
     
     [self.containerView addSubview:randomView];
     

@@ -18,8 +18,8 @@
 		F16F958F1833DC2D002CA229 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F95741833DC2D002CA229 /* Foundation.framework */; };
 		F16F95901833DC2D002CA229 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F95781833DC2D002CA229 /* UIKit.framework */; };
 		F16F95981833DC2D002CA229 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F16F95961833DC2D002CA229 /* InfoPlist.strings */; };
-		F16F959A1833DC2D002CA229 /* WebViewPreLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95991833DC2D002CA229 /* WebViewPreLoaderTests.m */; };
-		F16F95A51833DE7F002CA229 /* WebViewPreLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95A41833DE7F002CA229 /* WebViewPreLoader.m */; };
+		F16F959A1833DC2D002CA229 /* WebViewPreloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95991833DC2D002CA229 /* WebViewPreloaderTests.m */; };
+		F16F95A51833DE7F002CA229 /* WebViewPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95A41833DE7F002CA229 /* WebViewPreloader.m */; };
 		F16F95A91833E5BE002CA229 /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95A71833E5BE002CA229 /* PresentingViewController.m */; };
 		F16F95AA1833E5BE002CA229 /* PresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16F95A81833E5BE002CA229 /* PresentingViewController.xib */; };
 		F16F95AE1833E5C7002CA229 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95AC1833E5C7002CA229 /* DetailsViewController.m */; };
@@ -32,29 +32,29 @@
 			containerPortal = F16F95691833DC2D002CA229 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F16F95701833DC2D002CA229;
-			remoteInfo = WebViewPreLoader;
+			remoteInfo = WebViewPreloader;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F16F95711833DC2D002CA229 /* WebViewPreLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewPreLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16F95711833DC2D002CA229 /* WebViewPreloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewPreloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16F95741833DC2D002CA229 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F16F95761833DC2D002CA229 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F16F95781833DC2D002CA229 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F16F957C1833DC2D002CA229 /* WebViewPreLoader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewPreLoader-Info.plist"; sourceTree = "<group>"; };
+		F16F957C1833DC2D002CA229 /* WebViewPreloader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewPreloader-Info.plist"; sourceTree = "<group>"; };
 		F16F957E1833DC2D002CA229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F16F95801833DC2D002CA229 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F16F95821833DC2D002CA229 /* WebViewPreLoader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebViewPreLoader-Prefix.pch"; sourceTree = "<group>"; };
+		F16F95821833DC2D002CA229 /* WebViewPreloader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebViewPreloader-Prefix.pch"; sourceTree = "<group>"; };
 		F16F95831833DC2D002CA229 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F16F95841833DC2D002CA229 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F16F95861833DC2D002CA229 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F16F958C1833DC2D002CA229 /* WebViewPreLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewPreLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16F958C1833DC2D002CA229 /* WebViewPreloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewPreloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16F958D1833DC2D002CA229 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F16F95951833DC2D002CA229 /* WebViewPreLoaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewPreLoaderTests-Info.plist"; sourceTree = "<group>"; };
+		F16F95951833DC2D002CA229 /* WebViewPreloaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewPreloaderTests-Info.plist"; sourceTree = "<group>"; };
 		F16F95971833DC2D002CA229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F16F95991833DC2D002CA229 /* WebViewPreLoaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewPreLoaderTests.m; sourceTree = "<group>"; };
-		F16F95A31833DE7F002CA229 /* WebViewPreLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewPreLoader.h; sourceTree = "<group>"; };
-		F16F95A41833DE7F002CA229 /* WebViewPreLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewPreLoader.m; sourceTree = "<group>"; };
+		F16F95991833DC2D002CA229 /* WebViewPreloaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewPreloaderTests.m; sourceTree = "<group>"; };
+		F16F95A31833DE7F002CA229 /* WebViewPreloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewPreloader.h; sourceTree = "<group>"; };
+		F16F95A41833DE7F002CA229 /* WebViewPreloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewPreloader.m; sourceTree = "<group>"; };
 		F16F95A61833E5BE002CA229 /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
 		F16F95A71833E5BE002CA229 /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
 		F16F95A81833E5BE002CA229 /* PresentingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentingViewController.xib; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		F16F95681833DC2D002CA229 = {
 			isa = PBXGroup;
 			children = (
-				F16F957A1833DC2D002CA229 /* WebViewPreLoader */,
-				F16F95931833DC2D002CA229 /* WebViewPreLoaderTests */,
+				F16F957A1833DC2D002CA229 /* WebViewPreloader */,
+				F16F95931833DC2D002CA229 /* WebViewPreloaderTests */,
 				F16F95731833DC2D002CA229 /* Frameworks */,
 				F16F95721833DC2D002CA229 /* Products */,
 			);
@@ -100,8 +100,8 @@
 		F16F95721833DC2D002CA229 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F16F95711833DC2D002CA229 /* WebViewPreLoader.app */,
-				F16F958C1833DC2D002CA229 /* WebViewPreLoaderTests.xctest */,
+				F16F95711833DC2D002CA229 /* WebViewPreloader.app */,
+				F16F958C1833DC2D002CA229 /* WebViewPreloaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +117,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F16F957A1833DC2D002CA229 /* WebViewPreLoader */ = {
+		F16F957A1833DC2D002CA229 /* WebViewPreloader */ = {
 			isa = PBXGroup;
 			children = (
 				F16F95831833DC2D002CA229 /* AppDelegate.h */,
@@ -128,38 +128,40 @@
 				F16F95AB1833E5C7002CA229 /* DetailsViewController.h */,
 				F16F95AC1833E5C7002CA229 /* DetailsViewController.m */,
 				F16F95AD1833E5C7002CA229 /* DetailsViewController.xib */,
-				F16F95A31833DE7F002CA229 /* WebViewPreLoader.h */,
-				F16F95A41833DE7F002CA229 /* WebViewPreLoader.m */,
+				F16F95A31833DE7F002CA229 /* WebViewPreloader.h */,
+				F16F95A41833DE7F002CA229 /* WebViewPreloader.m */,
 				F16F95861833DC2D002CA229 /* Images.xcassets */,
 				F16F957B1833DC2D002CA229 /* Supporting Files */,
 			);
-			path = WebViewPreLoader;
+			name = WebViewPreloader;
+			path = WebViewPreloader;
 			sourceTree = "<group>";
 		};
 		F16F957B1833DC2D002CA229 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F16F957C1833DC2D002CA229 /* WebViewPreLoader-Info.plist */,
+				F16F957C1833DC2D002CA229 /* WebViewPreloader-Info.plist */,
 				F16F957D1833DC2D002CA229 /* InfoPlist.strings */,
 				F16F95801833DC2D002CA229 /* main.m */,
-				F16F95821833DC2D002CA229 /* WebViewPreLoader-Prefix.pch */,
+				F16F95821833DC2D002CA229 /* WebViewPreloader-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F16F95931833DC2D002CA229 /* WebViewPreLoaderTests */ = {
+		F16F95931833DC2D002CA229 /* WebViewPreloaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				F16F95991833DC2D002CA229 /* WebViewPreLoaderTests.m */,
+				F16F95991833DC2D002CA229 /* WebViewPreloaderTests.m */,
 				F16F95941833DC2D002CA229 /* Supporting Files */,
 			);
-			path = WebViewPreLoaderTests;
+			name = WebViewPreloaderTests;
+			path = WebViewPreloaderTests;
 			sourceTree = "<group>";
 		};
 		F16F95941833DC2D002CA229 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F16F95951833DC2D002CA229 /* WebViewPreLoaderTests-Info.plist */,
+				F16F95951833DC2D002CA229 /* WebViewPreloaderTests-Info.plist */,
 				F16F95961833DC2D002CA229 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -168,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F16F95701833DC2D002CA229 /* WebViewPreLoader */ = {
+		F16F95701833DC2D002CA229 /* WebViewPreloader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F16F959D1833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreLoader" */;
+			buildConfigurationList = F16F959D1833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreloader" */;
 			buildPhases = (
 				F16F956D1833DC2D002CA229 /* Sources */,
 				F16F956E1833DC2D002CA229 /* Frameworks */,
@@ -180,14 +182,14 @@
 			);
 			dependencies = (
 			);
-			name = WebViewPreLoader;
-			productName = WebViewPreLoader;
-			productReference = F16F95711833DC2D002CA229 /* WebViewPreLoader.app */;
+			name = WebViewPreloader;
+			productName = WebViewPreloader;
+			productReference = F16F95711833DC2D002CA229 /* WebViewPreloader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F16F958B1833DC2D002CA229 /* WebViewPreLoaderTests */ = {
+		F16F958B1833DC2D002CA229 /* WebViewPreloaderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F16F95A01833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreLoaderTests" */;
+			buildConfigurationList = F16F95A01833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreloaderTests" */;
 			buildPhases = (
 				F16F95881833DC2D002CA229 /* Sources */,
 				F16F95891833DC2D002CA229 /* Frameworks */,
@@ -198,9 +200,9 @@
 			dependencies = (
 				F16F95921833DC2D002CA229 /* PBXTargetDependency */,
 			);
-			name = WebViewPreLoaderTests;
-			productName = WebViewPreLoaderTests;
-			productReference = F16F958C1833DC2D002CA229 /* WebViewPreLoaderTests.xctest */;
+			name = WebViewPreloaderTests;
+			productName = WebViewPreloaderTests;
+			productReference = F16F958C1833DC2D002CA229 /* WebViewPreloaderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreLoader" */;
+			buildConfigurationList = F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreloader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,8 +231,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F16F95701833DC2D002CA229 /* WebViewPreLoader */,
-				F16F958B1833DC2D002CA229 /* WebViewPreLoaderTests */,
+				F16F95701833DC2D002CA229 /* WebViewPreloader */,
+				F16F958B1833DC2D002CA229 /* WebViewPreloaderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,7 +266,7 @@
 			files = (
 				F16F95851833DC2D002CA229 /* AppDelegate.m in Sources */,
 				F16F95AE1833E5C7002CA229 /* DetailsViewController.m in Sources */,
-				F16F95A51833DE7F002CA229 /* WebViewPreLoader.m in Sources */,
+				F16F95A51833DE7F002CA229 /* WebViewPreloader.m in Sources */,
 				F16F95811833DC2D002CA229 /* main.m in Sources */,
 				F16F95A91833E5BE002CA229 /* PresentingViewController.m in Sources */,
 			);
@@ -274,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F16F959A1833DC2D002CA229 /* WebViewPreLoaderTests.m in Sources */,
+				F16F959A1833DC2D002CA229 /* WebViewPreloaderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +285,7 @@
 /* Begin PBXTargetDependency section */
 		F16F95921833DC2D002CA229 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F16F95701833DC2D002CA229 /* WebViewPreLoader */;
+			target = F16F95701833DC2D002CA229 /* WebViewPreloader */;
 			targetProxy = F16F95911833DC2D002CA229 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -386,8 +388,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WebViewPreLoader/WebViewPreLoader-Prefix.pch";
-				INFOPLIST_FILE = "WebViewPreLoader/WebViewPreLoader-Info.plist";
+				GCC_PREFIX_HEADER = "WebViewPreloader/WebViewPreloader-Prefix.pch";
+				INFOPLIST_FILE = "WebViewPreloader/WebViewPreloader-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -399,8 +401,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WebViewPreLoader/WebViewPreLoader-Prefix.pch";
-				INFOPLIST_FILE = "WebViewPreLoader/WebViewPreLoader-Info.plist";
+				GCC_PREFIX_HEADER = "WebViewPreloader/WebViewPreloader-Prefix.pch";
+				INFOPLIST_FILE = "WebViewPreloader/WebViewPreloader-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -410,19 +412,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebViewPreLoader.app/WebViewPreLoader";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebViewPreloader.app/WebViewPreloader";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WebViewPreLoader/WebViewPreLoader-Prefix.pch";
+				GCC_PREFIX_HEADER = "WebViewPreloader/WebViewPreloader-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "WebViewPreLoaderTests/WebViewPreLoaderTests-Info.plist";
+				INFOPLIST_FILE = "WebViewPreloaderTests/WebViewPreloaderTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -433,15 +435,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebViewPreLoader.app/WebViewPreLoader";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebViewPreloader.app/WebViewPreloader";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WebViewPreLoader/WebViewPreLoader-Prefix.pch";
-				INFOPLIST_FILE = "WebViewPreLoaderTests/WebViewPreLoaderTests-Info.plist";
+				GCC_PREFIX_HEADER = "WebViewPreloader/WebViewPreloader-Prefix.pch";
+				INFOPLIST_FILE = "WebViewPreloaderTests/WebViewPreloaderTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -451,7 +453,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreLoader" */ = {
+		F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F16F959B1833DC2D002CA229 /* Debug */,
@@ -460,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F16F959D1833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreLoader" */ = {
+		F16F959D1833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F16F959E1833DC2D002CA229 /* Debug */,
@@ -469,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F16F95A01833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreLoaderTests" */ = {
+		F16F95A01833DC2D002CA229 /* Build configuration list for PBXNativeTarget "WebViewPreloaderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F16F95A11833DC2D002CA229 /* Debug */,

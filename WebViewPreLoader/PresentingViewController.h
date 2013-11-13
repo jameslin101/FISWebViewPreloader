@@ -1,13 +1,13 @@
 //
 //  PresentingViewController.h
-//  WebViewPreLoader
+//  WebViewPreloader
 //
 //  Created by Basar Akyelli on 11/13/13.
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "WebViewPreLoader.h"
+#import "WebViewPreloader.h"
 
 @interface PresentingViewController : UIViewController 
 
