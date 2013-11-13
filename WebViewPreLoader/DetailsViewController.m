@@ -26,11 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
+
     if(self.webView)
     {
         NSLog(@"Webview is alive!");
+        [self.webView setContentMode:UIViewContentModeRedraw];
 
         //TEST
         
@@ -38,11 +38,13 @@
        // [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.reddit.com"]]];
         
         
-        
+        NSLog(@"frame is %@", self.view);
        [self.webView setFrame:self.view.bounds];
-        self.webView.scalesPageToFit = YES;
         
         [self.view addSubview:self.webView];
+        
+        [self.view setNeedsDisplay];
+
     }
 
     

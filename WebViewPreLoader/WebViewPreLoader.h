@@ -8,13 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol WebViewPreLoaderDelegate <NSObject>
-- (void)finishedPreloading:(UIWebView *)webview forUrlString:urlString;
-@end
-
-@interface WebViewPreLoader : NSObject
-@property (nonatomic, weak) id <WebViewPreLoaderDelegate> delegate;
-
+@interface WebViewPreLoader : NSObject <UIWebViewDelegate>
 
 -(void) setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey;
 -(UIWebView *) webViewForKey:(id<NSCopying>)aKey;

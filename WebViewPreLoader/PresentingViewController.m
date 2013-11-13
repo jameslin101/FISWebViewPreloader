@@ -41,7 +41,6 @@
 -(void)preLoadWebViews
 {
     self.preLoader = [[WebViewPreLoader alloc]init];
-    //self.preLoader.delegate = self;
 
     [self.preLoader setURLString:@"http://www.reddit.com" forKey:@"Reddit" withFrameWidth:self.view.frame.size.width withFrameLength:self.view.frame.size.height];
     
@@ -88,22 +87,7 @@
     [self.navigationController pushViewController:dvc animated:YES];
 }
 
-#pragma mark WebViewPreLoaderDelegate methods
 
-- (void)preLoadStarted:(UIWebView *)webview forUrlString:(id)urlString
-{
-    webview.delegate = self;
-    NSLog(@"Preloaded webview: %@", webview);
-    
-}
 
-#pragma mark UIWebViewDelegate methods
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    NSLog(@"start loading %@", [self.preLoader keyForWebView:webView]);
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"stop loading %@", [self.preLoader keyForWebView:webView]);
-}
 @end

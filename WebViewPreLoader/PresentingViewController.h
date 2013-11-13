@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WebViewPreLoader.h"
 
-@interface PresentingViewController : UIViewController <UIWebViewDelegate>
+@interface PresentingViewController : UIViewController 
 
 
 - (IBAction)showCnnPressed:(id)sender;

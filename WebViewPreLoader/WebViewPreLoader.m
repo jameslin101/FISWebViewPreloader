@@ -45,13 +45,15 @@
     else {
         preLoadedWebView = [[UIWebView alloc]init];
     }
+//    preLoadedWebView.contentMode = UIViewContentModeRedraw;
+    
     [preLoadedWebView loadRequest:request];
     preLoadedWebView.scalesPageToFit = YES;
     
     [self.preLoadedWebViews setObject:preLoadedWebView forKey:aKey];
-    
-    [self.delegate finishedPreloading:preLoadedWebView forUrlString:aURLString];
 
+    preLoadedWebView.delegate = self;
+    
     return preLoadedWebView;
 }
 
@@ -72,5 +74,13 @@
 }
 
 
+#pragma mark UIWebViewDelegate methods
 
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"start loading %@", [self keyForWebView:webView]);
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"stop loading %@", [self keyForWebView:webView]);
+}
 @end
