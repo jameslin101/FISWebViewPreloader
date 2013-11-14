@@ -31,7 +31,19 @@
 {
     [super viewDidLoad];
     [self setTitle:@"Presenting View Controller"];
+ 
     
+//    [self.view removeConstraints:self.view.constraints];
+//
+//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f constant:100]];
+//    
+//     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0f constant:0.0f]];
+//    
+//    
+//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0f constant:0.0f]];
+//    
+//      [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0f constant:0.0f]];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +78,13 @@
     int randomNumber = arc4random_uniform(15);
     self.randomWebView = [self.preloader webViewForKey:[NSNumber numberWithInt:randomNumber]];
     
-    [self.containerView addSubview:self.randomWebView];
+   [self.containerView addSubview:self.randomWebView];
+    
+ //   [self.randomWebView removeConstraints:self.randomWebView.constraints];
+    
+ //   [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.randomWebView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeHeight multiplier:1.0f constant:0.0f]];
+    
+   // [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.randomWebView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f]];
     
 }
 
