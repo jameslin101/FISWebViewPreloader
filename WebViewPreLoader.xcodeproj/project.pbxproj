@@ -22,8 +22,6 @@
 		F16F95A51833DE7F002CA229 /* WebViewPreloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95A41833DE7F002CA229 /* WebViewPreloader.m */; };
 		F16F95A91833E5BE002CA229 /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95A71833E5BE002CA229 /* PresentingViewController.m */; };
 		F16F95AA1833E5BE002CA229 /* PresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16F95A81833E5BE002CA229 /* PresentingViewController.xib */; };
-		F16F95AE1833E5C7002CA229 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F95AC1833E5C7002CA229 /* DetailsViewController.m */; };
-		F16F95AF1833E5C7002CA229 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16F95AD1833E5C7002CA229 /* DetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +56,6 @@
 		F16F95A61833E5BE002CA229 /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
 		F16F95A71833E5BE002CA229 /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
 		F16F95A81833E5BE002CA229 /* PresentingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentingViewController.xib; sourceTree = "<group>"; };
-		F16F95AB1833E5C7002CA229 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
-		F16F95AC1833E5C7002CA229 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
-		F16F95AD1833E5C7002CA229 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,15 +120,11 @@
 				F16F95A61833E5BE002CA229 /* PresentingViewController.h */,
 				F16F95A71833E5BE002CA229 /* PresentingViewController.m */,
 				F16F95A81833E5BE002CA229 /* PresentingViewController.xib */,
-				F16F95AB1833E5C7002CA229 /* DetailsViewController.h */,
-				F16F95AC1833E5C7002CA229 /* DetailsViewController.m */,
-				F16F95AD1833E5C7002CA229 /* DetailsViewController.xib */,
 				F16F95A31833DE7F002CA229 /* WebViewPreloader.h */,
 				F16F95A41833DE7F002CA229 /* WebViewPreloader.m */,
 				F16F95861833DC2D002CA229 /* Images.xcassets */,
 				F16F957B1833DC2D002CA229 /* Supporting Files */,
 			);
-			name = WebViewPreloader;
 			path = WebViewPreloader;
 			sourceTree = "<group>";
 		};
@@ -154,7 +145,6 @@
 				F16F95991833DC2D002CA229 /* WebViewPreloaderTests.m */,
 				F16F95941833DC2D002CA229 /* Supporting Files */,
 			);
-			name = WebViewPreloaderTests;
 			path = WebViewPreloaderTests;
 			sourceTree = "<group>";
 		};
@@ -219,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreloader" */;
+			buildConfigurationList = F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreLoader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -245,7 +235,6 @@
 				F16F957F1833DC2D002CA229 /* InfoPlist.strings in Resources */,
 				F16F95871833DC2D002CA229 /* Images.xcassets in Resources */,
 				F16F95AA1833E5BE002CA229 /* PresentingViewController.xib in Resources */,
-				F16F95AF1833E5C7002CA229 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +254,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16F95851833DC2D002CA229 /* AppDelegate.m in Sources */,
-				F16F95AE1833E5C7002CA229 /* DetailsViewController.m in Sources */,
 				F16F95A51833DE7F002CA229 /* WebViewPreloader.m in Sources */,
 				F16F95811833DC2D002CA229 /* main.m in Sources */,
 				F16F95A91833E5BE002CA229 /* PresentingViewController.m in Sources */,
@@ -453,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreloader" */ = {
+		F16F956C1833DC2D002CA229 /* Build configuration list for PBXProject "WebViewPreLoader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F16F959B1833DC2D002CA229 /* Debug */,

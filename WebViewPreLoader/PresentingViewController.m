@@ -8,13 +8,12 @@
 
 #import "WebViewPreloader.h"
 #import "PresentingViewController.h"
-#import "DetailsViewController.h"
 
 
 @interface PresentingViewController ()
 
 @property (strong,nonatomic) WebViewPreloader *preloader;
-
+@property (strong,nonatomic) UIWebView *randomWebView;
 @end
 
 @implementation PresentingViewController
@@ -33,12 +32,6 @@
     [super viewDidLoad];
     [self setTitle:@"Presenting View Controller"];
     
-    // Do any additional setup after loading the view from its nib.
-}
-
--(void)preloadWebViews
-{
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,66 +39,52 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//
-//- (IBAction)showCnnPressed:(id)sender {
-//    UIWebView *cnnWebView = [self.preloader webViewForKey:@"CNN"];
-//    
-//    DetailsViewController *dvc = [[DetailsViewController alloc] init];
-//    dvc.webView = cnnWebView;
-//    
-//    [self.navigationController pushViewController:dvc animated:YES];
-//    
-//}
-//
-//- (IBAction)showRedditPressed:(id)sender {
-//    
-//    UIWebView *redditWebView = [self.preloader webViewForKey:@"Reddit"];
-//    
-//    DetailsViewController *dvc = [[DetailsViewController alloc] init];
-//    dvc.webView = redditWebView;
-//    
-//    [self.navigationController pushViewController:dvc animated:YES];
-//}
-//
-//- (IBAction)showGoogleNewsPressed:(id)sender {
-//    
-//    UIWebView *googleNewsWebView = [self.preloader webViewForKey:@"Google News"];
-//    
-//    DetailsViewController *dvc = [[DetailsViewController alloc] init];
-//    dvc.webView = googleNewsWebView;
-//    
-//    [self.navigationController pushViewController:dvc animated:YES];
-//}
-
-
-
 
 - (IBAction)startLoadingButtonPressed:(id)sender {
+    
     self.preloader = [[WebViewPreloader alloc]init];
     
-    for(int i = 0; i<100; i++)
+    for(int i = 0; i<15; i++)
     {
-       NSString *randomURL = [NSString stringWithFormat:@"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
-    [self.preloader setURLString:randomURL
+       
+     NSString *randomURL = [NSString stringWithFormat:
+                            @"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
+        
+     UIWebView *webView = [self.preloader setURLString:randomURL
                           forKey:[NSNumber numberWithInt:i]
                   withFrameWidth:self.containerView.frame.size.width
                  withFrameLength:self.containerView.frame.size.height];
-    
+        
+        webView.delegate = self;
     }
- 
-    
-    
 }
 
 - (IBAction)fetchRandomSiteButtonPressed:(id)sender {
     
     [self.containerView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     
-    int randomNumber = arc4random_uniform(100);
-    NSLog(@"I chose: %i", randomNumber);
-    UIWebView *randomView = [self.preloader webViewForKey:[NSNumber numberWithInt:randomNumber]];
+    int randomNumber = arc4random_uniform(15);
+    self.randomWebView = [self.preloader webViewForKey:[NSNumber numberWithInt:randomNumber]];
     
-    [self.containerView addSubview:randomView];
+    [self.containerView addSubview:self.randomWebView];
     
+}
+
+- (void)viewWillLayoutSubviews {
+    
+    [self.containerView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
+    [self.randomWebView setFrame:self.containerView.bounds];
+    [self.containerView addSubview:self.randomWebView];
+    
+}
+
+#pragma mark UIWebViewDelegate methods
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"Started loading %@", [self.preloader keyForWebView:webView]);
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"Finished loading %@", [self.preloader keyForWebView:webView]);
 }
 @end

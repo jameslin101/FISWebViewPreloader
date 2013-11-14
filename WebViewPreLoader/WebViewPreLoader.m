@@ -49,8 +49,6 @@
     preloadedWebView.scalesPageToFit = YES;
     
     [self.preloadedWebViews setObject:preloadedWebView forKey:aKey];
-
-    preloadedWebView.delegate = self;
         
     return preloadedWebView;
 }
@@ -87,13 +85,5 @@
     self.preloadedWebViews = [[NSMutableDictionary alloc] init];
 }
 
-#pragma mark UIWebViewDelegate methods
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    NSLog(@"start loading %@", [self keyForWebView:webView]);
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"stop loading %@", [self keyForWebView:webView]);
-}
 @end

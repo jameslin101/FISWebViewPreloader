@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WebViewPreloader.h"
 
-@interface PresentingViewController : UIViewController 
+@interface PresentingViewController : UIViewController <UIWebViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;

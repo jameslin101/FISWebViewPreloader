@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebViewPreloader : NSObject <UIWebViewDelegate>
+@interface WebViewPreloader : NSObject 
 
 -(void) setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey;
 -(UIWebView *) webViewForKey:(id<NSCopying>)aKey;

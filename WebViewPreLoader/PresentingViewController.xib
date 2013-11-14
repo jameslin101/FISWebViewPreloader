@@ -15,12 +15,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktE-h3-Iob">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktE-h3-Iob">
                     <rect key="frame" x="0.0" y="106" width="320" height="462"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef1-Cm-vSI">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef1-Cm-vSI">
                     <rect key="frame" x="5" y="68" width="93" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Start Loading">
@@ -30,7 +30,7 @@
                         <action selector="startLoadingButtonPressed:" destination="-1" eventType="touchUpInside" id="d9t-Jz-LIW"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIN-83-HPp">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIN-83-HPp">
                     <rect key="frame" x="205" y="68" width="101" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Fetch Random">
@@ -42,6 +42,14 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ktE-h3-Iob" firstAttribute="top" secondItem="Ef1-Cm-vSI" secondAttribute="bottom" constant="8" symbolic="YES" id="DiH-ku-9fI"/>
+                <constraint firstItem="ktE-h3-Iob" firstAttribute="top" secondItem="1" secondAttribute="top" constant="106" id="L3u-3S-FEb"/>
+                <constraint firstItem="ktE-h3-Iob" firstAttribute="top" secondItem="xIN-83-HPp" secondAttribute="bottom" constant="8" symbolic="YES" id="eam-CH-FeN"/>
+                <constraint firstItem="ktE-h3-Iob" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ezS-cp-yxD"/>
+                <constraint firstAttribute="bottom" secondItem="ktE-h3-Iob" secondAttribute="bottom" id="k7w-p6-bTk"/>
+                <constraint firstAttribute="trailing" secondItem="ktE-h3-Iob" secondAttribute="trailing" id="xZo-b0-EFZ"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
