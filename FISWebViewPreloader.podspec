@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jameslin101/FISWebViewPreloader.git", 
                      :tag => "0.1" }
 
-  s.source_files  = 'WebViewPreloader', 'WebViewPreloader*.{h,m}'
+  s.source_files  = 'WebViewPreloader/WebViewPreloader*.{h,m}'
 
   s.requires_arc = true
 
