@@ -1,15 +1,16 @@
 //
-//  AppDelegate.m
-//  WebViewPreloader
+//  FISRandomCatsAppDelegate.m
+//  RandomCats
 //
-//  Created by Basar Akyelli on 11/13/13.
-//  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
+//  Created by Chemin Lin on 11/14/13.
+//  Copyright (c) 2013 Basar Akyelli and James Lin. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "RandomCatsAppDelegate.h"
 #import "PresentingViewController.h"
 
-@implementation AppDelegate
+
+@implementation RandomCatsAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,14 +20,14 @@
     PresentingViewController *pvc = [[PresentingViewController alloc] init];
     
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:pvc];
-
+    
     self.window.rootViewController = navigationController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

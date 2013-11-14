@@ -1,0 +1,14 @@
+PODS:
+  - FISWebViewPreloader (0.1)
+
+DEPENDENCIES:
+  - FISWebViewPreloader (from `https://github.com/jameslin101/FISWebViewPreloader.git`)
+
+EXTERNAL SOURCES:
+  FISWebViewPreloader:
+    :git: https://github.com/jameslin101/FISWebViewPreloader.git
+
+SPEC CHECKSUMS:
+  FISWebViewPreloader: 58cf73c8bff3d1226e776aa10833944b2ec0e686
+
+COCOAPODS: 0.26.2
