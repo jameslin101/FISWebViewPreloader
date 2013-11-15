@@ -2,7 +2,7 @@
 `FISWebViewPreloader` is Cocoapod which helps loading `UIWebView` objects in the background so they can be presented without delays.
 
 ---
-#Installing FISWebViewPreloader
+##Installing FISWebViewPreloader
 You can install `FISWebViewPreloader` in your project by using [CocoaPods](https://github.com/cocoapods/cocoapods):
 
 ```Ruby
@@ -10,7 +10,7 @@ pod 'FISWebViewPreloader', :git => 'https://github.com/jameslin101/FISWebViewPre
 ```
 
 ---
-#Using FISWebViewPreloader to create pre-loaded `UIWebView` objects 
+##Using FISWebViewPreloader to create pre-loaded `UIWebView` objects 
 Using `FISWebViewPreloader` is very easy. We recommend creating a private variable to use `FISWebViewPreloader`:
 
 ```Objective-C
@@ -32,7 +32,7 @@ If you need to scale the web pages to fit a certain frame, you can pass the Widt
                  withFrameLength:self.view.frame.size.height];
 ```
 ---
-#Using FISWebViewPreloader to access pre-loaded `UIWebView` objects 
+##Accessing your pre-loaded `UIWebView` objects 
 
 There are two ways of accessing the pre-loaded `UIWebView` objects. You can either retrieve your `UIWebView` object at the time of their creation: 
 
@@ -54,7 +54,32 @@ NSString *myKey = [self.preloader keyForWebView:googleWebView];
 ```
 
 ---
-#Removing pre-loaded `UIWebView` objects
+##`UIWebViewDelegate` Protocol: 
+
+If your View Controller adheres to the `UIWebViewDelegate` protocol, then you can use a similar pattern to below to access delegate methods:
+
+```Objective-C
+
+-(void)createWebViews
+{
+    UIWebView *googleWebView = [self.preloader setURLString:@"http://www.google.com" forKey:@"Google"];
+    googleWebView.delegate = self;
+}
+
+#pragma mark UIWebViewDelegate methods
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"Started loading %@", [self.preloader keyForWebView:webView]);
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"Finished loading %@", [self.preloader keyForWebView:webView]);
+}
+```
+
+
+---
+##Removing pre-loaded `UIWebView` objects
 
 You can call the `removeWebViewForKey:` method to stop the destroy any `UIWebView` objects that you no longer need: 
 
