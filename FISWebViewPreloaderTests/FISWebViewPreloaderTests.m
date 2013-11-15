@@ -1,6 +1,6 @@
 //
-//  WebViewPreloaderTests.m
-//  WebViewPreloaderTests
+//  FISWebViewPreloaderTests.m
+//  FISWebViewPreloaderTests
 //
 //  Created by Basar Akyelli on 11/13/13.
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface WebViewPreloaderTests : XCTestCase
+@interface FISWebViewPreloaderTests : XCTestCase
 
 @end
 
-@implementation WebViewPreloaderTests
+@implementation FISWebViewPreloaderTests
 
 - (void)setUp
 {

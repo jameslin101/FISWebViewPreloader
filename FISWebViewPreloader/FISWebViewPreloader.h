@@ -1,6 +1,6 @@
 //
-//  WebViewPreloader.h
-//  WebViewPreloader
+//  FISWebViewPreloader.h
+//  FISWebViewPreloader
 //
 //  Created by Basar Akyelli on 11/13/13.
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebViewPreloader : NSObject 
+@interface FISWebViewPreloader : NSObject
 
 -(void) setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey;
--(UIWebView *) webViewForKey:(id<NSCopying>)aKey;
+-(UIWebView *) FISWebViewForKey:(id<NSCopying>)aKey;
 -(UIWebView *) setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey withFrameWidth:(double)aWidth withFrameLength:(double)aHeight;
-- (id)keyForWebView:(UIWebView *)webview;
+- (id)keyForWebView:(UIWebView *)WebView;
 
 
 @end
