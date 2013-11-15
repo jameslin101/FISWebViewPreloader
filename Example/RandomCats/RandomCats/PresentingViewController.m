@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
 //
 
-#import "WebViewPreloader.h"
+#import "FISWebViewPreloader.h"
 #import "PresentingViewController.h"
 
 
 @interface PresentingViewController ()
 
-@property (strong,nonatomic) WebViewPreloader *preloader;
+@property (strong,nonatomic) FISWebViewPreloader *preloader;
 @property (strong,nonatomic) UIWebView *randomWebView;
 @end
 
@@ -54,7 +54,7 @@
 
 - (IBAction)startLoadingButtonPressed:(id)sender {
     
-    self.preloader = [[WebViewPreloader alloc]init];
+    self.preloader = [[FISWebViewPreloader alloc]init];
     
     for(int i = 0; i<15; i++)
     {

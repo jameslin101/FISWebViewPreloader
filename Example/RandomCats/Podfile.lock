@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/jameslin101/FISWebViewPreloader.git
 
 SPEC CHECKSUMS:
-  FISWebViewPreloader: 58cf73c8bff3d1226e776aa10833944b2ec0e686
+  FISWebViewPreloader: dceb9ab75afccce25a33d415ccccc3ac23e2bf95
 
 COCOAPODS: 0.26.2

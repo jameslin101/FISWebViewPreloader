@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WebViewPreloader.h"
+#import "FISWebViewPreloader.h"
 
 @interface PresentingViewController : UIViewController <UIWebViewDelegate>
 
