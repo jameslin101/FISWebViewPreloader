@@ -14,7 +14,6 @@
 		6E92E2D8183587AD00549125 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E92E2D6183587AD00549125 /* InfoPlist.strings */; };
 		6E92E2DA183587AD00549125 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92E2D9183587AD00549125 /* main.m */; };
 		6E92E2DE183587AD00549125 /* RandomCatsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92E2DD183587AD00549125 /* RandomCatsAppDelegate.m */; };
-		6E92E2E1183587AD00549125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E92E2DF183587AD00549125 /* Main.storyboard */; };
 		6E92E2E6183587AD00549125 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E92E2E5183587AD00549125 /* Images.xcassets */; };
 		6E92E2ED183587AD00549125 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92E2EC183587AD00549125 /* XCTest.framework */; };
 		6E92E2EE183587AD00549125 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E92E2CD183587AD00549125 /* Foundation.framework */; };
@@ -47,7 +46,6 @@
 		6E92E2DB183587AD00549125 /* RandomCats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomCats-Prefix.pch"; sourceTree = "<group>"; };
 		6E92E2DC183587AD00549125 /* RandomCatsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomCatsAppDelegate.h; sourceTree = "<group>"; };
 		6E92E2DD183587AD00549125 /* RandomCatsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomCatsAppDelegate.m; sourceTree = "<group>"; };
-		6E92E2E0183587AD00549125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E92E2E5183587AD00549125 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6E92E2EB183587AD00549125 /* RandomCatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomCatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E92E2EC183587AD00549125 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -122,7 +120,6 @@
 			children = (
 				6E92E2DC183587AD00549125 /* RandomCatsAppDelegate.h */,
 				6E92E2DD183587AD00549125 /* RandomCatsAppDelegate.m */,
-				6E92E2DF183587AD00549125 /* Main.storyboard */,
 				6E92E3021835883800549125 /* PresentingViewController.h */,
 				6E92E3031835883800549125 /* PresentingViewController.m */,
 				6E92E3041835883800549125 /* PresentingViewController.xib */,
@@ -242,7 +239,6 @@
 			files = (
 				6E92E2E6183587AD00549125 /* Images.xcassets in Resources */,
 				6E92E2D8183587AD00549125 /* InfoPlist.strings in Resources */,
-				6E92E2E1183587AD00549125 /* Main.storyboard in Resources */,
 				6E92E3081835883800549125 /* PresentingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,14 +322,6 @@
 				6E92E2D7183587AD00549125 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6E92E2DF183587AD00549125 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E92E2E0183587AD00549125 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		6E92E2F5183587AD00549125 /* InfoPlist.strings */ = {
