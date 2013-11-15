@@ -10,7 +10,7 @@
 
 @interface FISWebViewPreloader ()
 
-@property (strong,nonatomic) NSMutableDictionary *preloadedFISWebViews;
+@property (strong,nonatomic) NSMutableDictionary *preloadWebViews;
 
 @end
 
@@ -23,7 +23,7 @@
     
     if(self)
     {
-        _preloadedFISWebViews = [[NSMutableDictionary alloc]init];
+        _preloadWebViews = [[NSMutableDictionary alloc]init];
     }
     
     return self;
@@ -48,7 +48,7 @@
     [preloadedFISWebView loadRequest:request];
     preloadedFISWebView.scalesPageToFit = YES;
     
-    [self.preloadedFISWebViews setObject:preloadedFISWebView forKey:aKey];
+    [self.preloadWebViews setObject:preloadedFISWebView forKey:aKey];
         
     return preloadedFISWebView;
 }
@@ -59,30 +59,30 @@
     [self setURLString:aURLString forKey:aKey withFrameWidth:0.0 withFrameLength:0.0];
 }
 
-- (UIWebView *)FISWebViewForKey:(id<NSCopying>)aKey
+- (UIWebView *)webViewForKey:(id<NSCopying>)aKey
 {
-    return self.preloadedFISWebViews[aKey];
+    return self.preloadWebViews[aKey];
 }
 
-- (id)keyForFISWebView:(UIWebView *)FISWebView {
+- (id)keyForWebView:(UIWebView *)webView {
     
-    return [[self.preloadedFISWebViews allKeysForObject:FISWebView] firstObject];
+    return [[self.preloadWebViews allKeysForObject:webView] firstObject];
 }
 
-- (void)removeFISWebViewForKey:(id<NSCopying>)aKey
+- (void)removeWebViewForKey:(id<NSCopying>)aKey
 {
-    UIWebView *FISWebViewToRemove = [self FISWebViewForKey:aKey];
+    UIWebView *webViewToRemove = [self webViewForKey:aKey];
     
-    if ([FISWebViewToRemove isLoading]) [FISWebViewToRemove stopLoading];
+    if ([webViewToRemove isLoading]) [webViewToRemove stopLoading];
     
-    FISWebViewToRemove = nil;
+    webViewToRemove = nil;
     
-    [self.preloadedFISWebViews removeObjectForKey:aKey];
+    [self.preloadWebViews removeObjectForKey:aKey];
 }
 
 - (void)clear
 {
-    self.preloadedFISWebViews = [[NSMutableDictionary alloc] init];
+    self.preloadWebViews = [[NSMutableDictionary alloc] init];
 }
 
 

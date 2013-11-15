@@ -10,10 +10,11 @@
 
 @interface FISWebViewPreloader : NSObject
 
--(void) setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey;
--(UIWebView *) webViewForKey:(id<NSCopying>)aKey;
--(UIWebView *) setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey withFrameWidth:(double)aWidth withFrameLength:(double)aHeight;
+- (void)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey;
+- (UIWebView *)webViewForKey:(id<NSCopying>)aKey;
+- (UIWebView *)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey withFrameWidth:(double)aWidth withFrameLength:(double)aHeight;
 - (id)keyForWebView:(UIWebView *)WebView;
-
+- (void)removeWebViewForKey:(id<NSCopying>)aKey;
+- (void)clear;
 
 @end
