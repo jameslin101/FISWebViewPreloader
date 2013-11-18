@@ -54,9 +54,9 @@
 }
 
 
-- (void)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey
+- (UIWebView *)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey
 {
-    [self setURLString:aURLString forKey:aKey withFrameWidth:0.0 withFrameLength:0.0];
+    return [self setURLString:aURLString forKey:aKey withFrameWidth:0.0 withFrameLength:0.0];
 }
 
 - (UIWebView *)webViewForKey:(id<NSCopying>)aKey
@@ -78,6 +78,10 @@
     webViewToRemove = nil;
     
     [self.preloadWebViews removeObjectForKey:aKey];
+}
+
+- (NSArray *)allKeys {
+    return [self.preloadWebViews allKeys];
 }
 
 - (void)clear

@@ -87,7 +87,11 @@ You can call the `removeWebViewForKey:` method to stop the destroy any `UIWebVie
 [self.preloader removeWebViewForKey:@"Google"];
 ```
 
+You can also call the `clear:` method to destroy all key/object pairs preloader: 
 
+```Objective-C
+[self.preloader clear];
+```
 
 
 
