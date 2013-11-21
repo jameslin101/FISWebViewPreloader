@@ -45,16 +45,17 @@
     
     self.preloader = [[FISWebViewPreloader alloc]init];
     
-    for(int i = 0; i<15; i++)
+    for(NSInteger i = 0; i<15; i++)
     {
        
-     NSString *randomURL = [NSString stringWithFormat:
-                            @"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
+        NSString *randomURL = [NSString stringWithFormat:
+                           @"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
+
+        CGRect cgRect = CGRectMake(0,0,self.containerView.frame.size.width, self.containerView.frame.size.height);
         
-     UIWebView *webView = [self.preloader setURLString:randomURL
-                          forKey:[NSNumber numberWithInt:i]
-                  withFrameWidth:self.containerView.frame.size.width
-                 withFrameLength:self.containerView.frame.size.height];
+        UIWebView *webView = [self.preloader setURLString:randomURL
+                                                   forKey:[NSNumber numberWithInt:i]
+                                               withCGRect:cgRect];
         
         webView.delegate = self;
     }
