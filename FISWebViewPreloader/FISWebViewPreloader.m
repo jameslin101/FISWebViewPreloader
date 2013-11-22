@@ -5,6 +5,7 @@
 
 @property (strong, nonatomic) NSMutableDictionary *preloadManager;
 @property (nonatomic) NSInteger capacity;
+@property (nonatomic) ScheduleType schedule;
 @end
 
 @implementation FISWebViewPreloader
@@ -16,16 +17,18 @@
     if(self) {
         [self reset];
         _capacity = NSIntegerMax;
+        _schedule = FIFO;
     }
     
     return self;
 }
 
-- (id)initWithCapacity:(NSInteger)capacity
+- (id)initWithCapacity:(NSInteger)capacity scheduleType:(ScheduleType)schedule
 {
     self = [[FISWebViewPreloader alloc] init];
     if (self) {
         _capacity = capacity;
+        _schedule = schedule;
     }
     return self;
 }
@@ -40,11 +43,14 @@
                                                                  withCGRect:cgRect];
      
     [self.preloadManager setObject:preloadItem forKey:aKey];
-    [self.priorityQueue insertObject:aKey atIndex:0];
-
+    if (self.schedule == FIFO) {
+        [self.priorityQueue insertObject:aKey atIndex:0];
+    }
+    else {
+        [self.priorityQueue addObject:aKey];
+    }
     return [preloadItem webView];
 }
-
 
 - (UIWebView *)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey
 {
@@ -61,7 +67,6 @@
 
     return preloadItem.webView;
 }
-
 
 - (void)unloadWebViewForKey:(id<NSCopying>)aKey
 {    
