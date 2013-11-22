@@ -43,22 +43,13 @@
 
 - (IBAction)startLoadingButtonPressed:(id)sender {
     
-    self.preloader = [[FISWebViewPreloader alloc]init];
+    self.preloader = [[FISWebViewPreloader alloc] initWithCapacity:5];
     
     for(NSInteger i = 0; i<15; i++)
     {
-       
-        NSString *randomURL = [NSString stringWithFormat:
-                           @"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
-
-        CGRect cgRect = CGRectMake(0,0,self.containerView.frame.size.width, self.containerView.frame.size.height);
-        
-        UIWebView *webView = [self.preloader setURLString:randomURL
-                                                   forKey:[NSNumber numberWithInt:i]
-                                               withCGRect:cgRect];
-        
-        webView.delegate = self;
+        [self loadWebView:i];
     }
+    
 }
 
 - (IBAction)fetchRandomSiteButtonPressed:(id)sender {
@@ -68,13 +59,29 @@
     int randomNumber = arc4random_uniform(15);
     self.randomWebView = [self.preloader webViewForKey:[NSNumber numberWithInt:randomNumber]];
     
-   [self.containerView addSubview:self.randomWebView];
+    [self.containerView addSubview:self.randomWebView];
     
+    NSLog(@"priority queue:%@", self.preloader.priorityQueue);
 
     
 }
 
-- (void)viewWillLayoutSubviews {
+- (void)loadWebView:(NSInteger)i
+{
+    NSString *randomURL = [NSString stringWithFormat:
+                           @"http://thecatapi.com/api/images/get?format=src&type=png&blah=%i", i];
+    
+    CGRect cgRect = CGRectMake(0,0,self.containerView.frame.size.width, self.containerView.frame.size.height);
+    
+    UIWebView *webView = [self.preloader setURLString:randomURL
+                                               forKey:[NSNumber numberWithInt:i]
+                                           withCGRect:cgRect];
+    
+    webView.delegate = self;
+}
+
+- (void)viewWillLayoutSubviews
+{
     
     [self.containerView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     [self.randomWebView setFrame:self.containerView.bounds];
@@ -84,11 +91,14 @@
 
 #pragma mark UIWebViewDelegate methods
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    NSLog(@"Started loading %@", [self.preloader keyForWebView:webView]);
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    NSLog(@"Started loading %@", webView.request.URL);
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"Finished loading %@", [self.preloader keyForWebView:webView]);
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"Finished loading %@", webView.request.URL);
 }
+
 @end

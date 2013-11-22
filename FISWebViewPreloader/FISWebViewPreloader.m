@@ -1,19 +1,11 @@
-//
-//  FISWebViewPreloader.m
-//  FISWebViewPreloader
-//
-//  Created by Basar Akyelli on 11/13/13.
-//  Copyright (c) 2013 James Lin & Basar Akyelli. All rights reserved.
-//
-
 #import "FISWebViewPreloader.h"
+#import "FISPreloadItem.h"
 
 @interface FISWebViewPreloader ()
 
-@property (strong,nonatomic) NSMutableDictionary *preloadWebViews;
-
+@property (strong, nonatomic) NSMutableDictionary *preloadManager;
+@property (nonatomic) NSInteger capacity;
 @end
-
 
 @implementation FISWebViewPreloader
 
@@ -21,72 +13,73 @@
 {
     self = [super init];
     
-    if(self)
-    {
-        _preloadWebViews = [[NSMutableDictionary alloc]init];
+    if(self) {
+        [self reset];
+        _capacity = NSIntegerMax;
     }
     
     return self;
 }
 
-- (UIWebView *)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey withFrameWidth:(double)aWidth withFrameLength:(double)aHeight
+- (id)initWithCapacity:(NSInteger)capacity
 {
-    
-    NSURL *url = [NSURL URLWithString:aURLString];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
- 
-    UIWebView *preloadedFISWebView;
-    
-    if (aWidth > 0 && aHeight > 0) {
-        preloadedFISWebView = [[UIWebView alloc]initWithFrame:(CGRectMake(0, 0, aWidth, aHeight))];
+    self = [[FISWebViewPreloader alloc] init];
+    if (self) {
+        _capacity = capacity;
     }
-    else {
-        preloadedFISWebView = [[UIWebView alloc]init];
+    return self;
+}
+
+- (UIWebView *)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey withCGRect:(CGRect)cgRect
+{
+    if ([[self allKeys] count] >= self.capacity) {
+        [self unloadWebViewForKey:[self.priorityQueue lastObject]];
     }
     
-    [preloadedFISWebView loadRequest:request];
-    preloadedFISWebView.scalesPageToFit = YES;
-    
-    [self.preloadWebViews setObject:preloadedFISWebView forKey:aKey];
-        
-    return preloadedFISWebView;
+    FISPreloadItem *preloadItem = [[FISPreloadItem alloc] initWithURLString:aURLString
+                                                                 withCGRect:cgRect];
+     
+    [self.preloadManager setObject:preloadItem forKey:aKey];
+    [self.priorityQueue insertObject:aKey atIndex:0];
+
+    return [preloadItem webView];
 }
 
 
 - (UIWebView *)setURLString:(NSString *)aURLString forKey:(id<NSCopying>)aKey
 {
-    return [self setURLString:aURLString forKey:aKey withFrameWidth:0.0 withFrameLength:0.0];
+    return [self setURLString:aURLString forKey:aKey withCGRect:CGRectNull];
 }
 
 - (UIWebView *)webViewForKey:(id<NSCopying>)aKey
 {
-    return self.preloadWebViews[aKey];
-}
-
-- (id)keyForWebView:(UIWebView *)webView {
+    //Move object to front of priority queue if accessed
+    [self.priorityQueue removeObject:aKey];
+    [self.priorityQueue insertObject:aKey atIndex:0];
     
-    return [[self.preloadWebViews allKeysForObject:webView] firstObject];
+    FISPreloadItem *preloadItem = self.preloadManager[aKey];
+
+    return preloadItem.webView;
 }
 
-- (void)removeWebViewForKey:(id<NSCopying>)aKey
+
+- (void)unloadWebViewForKey:(id<NSCopying>)aKey
+{    
+    FISPreloadItem *preloadItem = self.preloadManager[aKey];
+    [preloadItem unloadWebView];
+    [self.priorityQueue removeObject:aKey];
+
+}
+
+- (NSArray *)allKeys
 {
-    UIWebView *webViewToRemove = [self webViewForKey:aKey];
-    
-    if ([webViewToRemove isLoading]) [webViewToRemove stopLoading];
-    
-    webViewToRemove = nil;
-    
-    [self.preloadWebViews removeObjectForKey:aKey];
+    return [self.preloadManager allKeys];
 }
 
-- (NSArray *)allKeys {
-    return [self.preloadWebViews allKeys];
-}
-
-- (void)clear
+- (void)reset
 {
-    self.preloadWebViews = [[NSMutableDictionary alloc] init];
+    self.preloadManager = [[NSMutableDictionary alloc] init];
+    self.priorityQueue = [[NSMutableArray alloc] init];
 }
 
 
