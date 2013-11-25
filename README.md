@@ -15,6 +15,10 @@ Using `FISWebViewPreloader` is very easy. We recommend creating a private variab
 
 ```Objective-C
 @property (strong,nonatomic) FISWebViewPreloader *preloader;
+
+....
+
+self.preloader = [FISWebViewPreloader new];
 ```
 
 Any time you need to create a pre-loaded `UIWebView` object, you can add your URL string to `FISWebViewPreloader`'s dictionary. 
@@ -28,9 +32,18 @@ If you need to scale the web pages to fit a certain frame, you can pass the Widt
 ```Objective-C
 [self.preloader setURLString:@"http://www.apple.com"
                           forKey:@"Apple"
-                  withFrameWidth:self.view.frame.size.width
-                 withFrameLength:self.view.frame.size.height];
+                      withCGRect:CGRectMake(0,0,self.view.frame.size.width, self.view.frame.size.height)];
 ```
+---
+##Adding Capacity constraint with scheduling
+If you are concerned about FISWebViewPreloader to take too much memory, you can define a capacity for the number of `UIWebView`s to be created and pre-loaded. 
+
+```Objective-C
+self.preloader = [[FISWebViewPreloader alloc] initWithCapacity:5 scheduleType:FIFO];
+```
+
+This will make sure that if more than 5 `UIWebView`s are added, older `UIWebView`s will be removed based on your specified `ScheduleType` (LIFO or FIFO)
+
 ---
 ##Accessing your pre-loaded `UIWebView` objects 
 
