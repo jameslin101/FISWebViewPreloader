@@ -42,9 +42,8 @@ If you are concerned about FISWebViewPreloader to take too much memory, you can 
 self.preloader = [[FISWebViewPreloader alloc] initWithCapacity:5 scheduleType:FIFO];
 ```
 
-This will make sure that if more than 5 `UIWebView`s are added, older `UIWebView`s will be removed based on your specified `ScheduleType` (LIFO or FIFO)
+This will make sure that if more than 5 `UIWebView`s are added, older `UIWebView`s will be removed based on your specified `ScheduleType` (LIFO or FIFO). If you try to access an already-dequeued `UIWebView`, the requested `UIWebView` will be re-created on the fly.
 
-If you try to access an already-dequeued `UIWebView`, the requested `UIWebView` will be re-created on the fly.
 ---
 ##Accessing your pre-loaded `UIWebView` objects 
 
