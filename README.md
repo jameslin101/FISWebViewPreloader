@@ -44,6 +44,8 @@ self.preloader = [[FISWebViewPreloader alloc] initWithCapacity:5 scheduleType:FI
 
 This will make sure that if more than 5 `UIWebView`s are added, older `UIWebView`s will be removed based on your specified `ScheduleType` (LIFO or FIFO). If you try to access an already-dequeued `UIWebView`, the requested `UIWebView` will be re-created on the fly.
 
+Whenever you access a UIWebView object it will automatically be placed at the head of the priorityQueue.
+
 ---
 ##Accessing your pre-loaded `UIWebView` objects 
 
@@ -100,11 +102,10 @@ You can call the `removeWebViewForKey:` method to stop the destroy any `UIWebVie
 [self.preloader removeWebViewForKey:@"Google"];
 ```
 
-You can also call the `clear:` method to destroy all key/object pairs preloader: 
+You can also call the `reset:` method to destroy all key/object pairs in the preloader and the priorityQueue: 
 
 ```Objective-C
-[self.preloader clear];
+[self.preloader reset];
 ```
-
 
 
