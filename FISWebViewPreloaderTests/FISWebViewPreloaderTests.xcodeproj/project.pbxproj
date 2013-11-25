@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E6A11BC1843C73900DA2A73 /* FISPreloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A11BB1843C73900DA2A73 /* FISPreloadItem.m */; };
 		6E777852183A944600482C47 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E777851183A944600482C47 /* XCTest.framework */; };
 		6E77785C183A944600482C47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E77785A183A944600482C47 /* InfoPlist.strings */; };
 		6E77785E183A944600482C47 /* FISWebViewPreloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E77785D183A944600482C47 /* FISWebViewPreloaderTests.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E6A11BA1843C73900DA2A73 /* FISPreloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FISPreloadItem.h; path = ../../FISWebViewPreloader/FISPreloadItem.h; sourceTree = "<group>"; };
+		6E6A11BB1843C73900DA2A73 /* FISPreloadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FISPreloadItem.m; path = ../../FISWebViewPreloader/FISPreloadItem.m; sourceTree = "<group>"; };
 		6E77784E183A944600482C47 /* FISWebViewPreloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FISWebViewPreloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E777851183A944600482C47 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6E777859183A944600482C47 /* FISWebViewPreloaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FISWebViewPreloaderTests-Info.plist"; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				6E77785D183A944600482C47 /* FISWebViewPreloaderTests.m */,
 				6E777863183A94AE00482C47 /* FISWebViewPreloader.h */,
 				6E777864183A94BC00482C47 /* FISWebViewPreloader.m */,
+				6E6A11BA1843C73900DA2A73 /* FISPreloadItem.h */,
+				6E6A11BB1843C73900DA2A73 /* FISPreloadItem.m */,
 				6E777858183A944600482C47 /* Supporting Files */,
 			);
 			path = FISWebViewPreloaderTests;
@@ -153,6 +158,7 @@
 			files = (
 				6E77785E183A944600482C47 /* FISWebViewPreloaderTests.m in Sources */,
 				6E777865183A94BC00482C47 /* FISWebViewPreloader.m in Sources */,
+				6E6A11BC1843C73900DA2A73 /* FISPreloadItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

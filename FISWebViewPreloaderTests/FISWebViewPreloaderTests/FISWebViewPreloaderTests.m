@@ -48,20 +48,12 @@
     });
 }
 
-- (void)testKeyForWebView
-{
-    [self helperSetURLString];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIWebView *google = [self.preloader webViewForKey:@"google"];
-        XCTAssertTrue([[self.preloader keyForWebView:google] isEqualToString:@"google"], @"webViewForKey returns an instance of WebView");
-    });
-}
 
-- (void)testRemoveWebViewForKey
+- (void)testUnloadWebViewForKey
 {
     [self helperSetURLString];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.preloader removeWebViewForKey:@"google"];
+        [self.preloader unloadWebViewForKey:@"google"];
         XCTAssertTrue([self.preloader webViewForKey:@"google"] == nil, @"removeWebViewForKey did not remove the webView");
     });
 }
@@ -70,7 +62,7 @@
 {
     [self helperSetURLString];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.preloader clear];
+        [self.preloader reset];
         XCTAssertTrue([[self.preloader allKeys] isEqualToArray:@[]], @"clear did not clear out the preloader");
     });
 }
@@ -79,7 +71,7 @@
 
 - (void)helperSetURLString {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.preloader setURLString:@"http://google.com" forKey:@"google" withFrameWidth:50 withFrameLength:50];
+        [self.preloader setURLString:@"http://google.com" forKey:@"google" withCGRect:CGRectMake(0, 0, 50, 50)];
     });
 }
 
