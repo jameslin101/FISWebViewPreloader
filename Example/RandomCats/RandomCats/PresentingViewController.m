@@ -43,7 +43,7 @@
 
 - (IBAction)startLoadingButtonPressed:(id)sender {
     
-    self.preloader = [[FISWebViewPreloader alloc] initWithCapacity:5];
+    self.preloader = [[FISWebViewPreloader alloc] initWithCapacity:5 scheduleType:FIFO];
     
     for(NSInteger i = 0; i<15; i++)
     {
