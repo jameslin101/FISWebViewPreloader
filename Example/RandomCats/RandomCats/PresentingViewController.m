@@ -31,18 +31,17 @@
 {
     [super viewDidLoad];
     [self setTitle:@"Presenting View Controller"];
-
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)startLoadingButtonPressed:(id)sender {
     
+    
+    //Creating a Preloader with capacity of 5 UIWebViews.
     self.preloader = [[FISWebViewPreloader alloc] initWithCapacity:5 scheduleType:FIFO];
     
     for(NSInteger i = 0; i<15; i++)
