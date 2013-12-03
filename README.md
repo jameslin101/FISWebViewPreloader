@@ -6,7 +6,7 @@
 You can install `FISWebViewPreloader` in your project by using [CocoaPods](https://github.com/cocoapods/cocoapods):
 
 ```Ruby
-pod 'FISWebViewPreloader', :git => 'https://github.com/jameslin101/FISWebViewPreloader.git'
+pod 'FISWebViewPreloader'
 ```
 
 ---
