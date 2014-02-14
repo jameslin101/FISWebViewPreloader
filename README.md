@@ -1,4 +1,4 @@
-#UIWebView Preloader 
+#FISWebViewPreloader 
 `FISWebViewPreloader` is Cocoapod which helps loading `UIWebView` objects in the background so they can be presented without delays.
 
 ---
